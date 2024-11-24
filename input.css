@@ -1,0 +1,52 @@
+body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #1e293b, #0f172a);
+      font-family: Arial, sans-serif;
+}
+
+.wrapper {
+      position: relative;
+      width: 300px;
+}
+
+input {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background: linear-gradient(120deg, #1e90ff, #00bcd4, #ff4081);
+      background-size: 200% 200%;
+      color: #fff;
+      animation: morphBackground 4s ease infinite;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+}
+
+input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes morphBackground {
+      0% {
+            background-position: 0% 50%;
+      }
+
+      50% {
+            background-position: 100% 50%;
+      }
+
+      100% {
+            background-position: 0% 50%;
+      }
+}
